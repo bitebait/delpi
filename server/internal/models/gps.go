@@ -1,4 +1,4 @@
-package model
+package models
 
 type GPS struct {
 	Lat  float64 `json:"lat"`

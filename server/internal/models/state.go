@@ -1,9 +1,9 @@
-package model
+package models
 
 type Departamento struct {
 	ID     int    `json:"id" gorm:"primaryKey"`
 	Nombre string `json:"nombre"`
-	Gps    GPS    `json:"gps" gorm:"embedded"`
+	GPS    GPS    `json:"gps" gorm:"embedded"`
 	Dato   string `json:"dato"`
 }
 

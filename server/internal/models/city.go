@@ -1,4 +1,4 @@
-package model
+package models
 
 type Ciudad struct {
 	ID             int          `json:"id" gorm:"primaryKey"`

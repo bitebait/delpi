@@ -1,2 +1,5 @@
-/apiGo/.env
-/server/.env
+# env file
+.env
+
+# vscode
+.vscode

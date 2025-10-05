@@ -1,6 +1,6 @@
-package model
+package dto
 
-type PostModel struct {
+type CreateStateRequest struct {
 	Response []struct {
 		Nombre string `json:"nombre"`
 		Gps    struct {
