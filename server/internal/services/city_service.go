@@ -41,7 +41,7 @@ func (s *CityService) Find(limit int, page int, sort string) (models.Pagination,
 
 func (s *CityService) FindByStateID(id int) []models.CiudadOnly {
 	var cities []models.CiudadOnly
-	s.db.Where("departamento_id =?", id).Preload("Deparamento").Find(&cities)
+	s.db.Where("departamento_id = ?", id).Preload("Deparamento").Find(&cities)
 	return cities
 }
 

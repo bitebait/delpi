@@ -41,7 +41,7 @@ func (s *DistrictService) Find(limit int, page int, sort string) (models.Paginat
 
 func (s *DistrictService) FindByCityID(id int) []models.BarrioOnly {
 	var barrios []models.BarrioOnly
-	s.db.Where("ciudad_id =?", id).Preload("Ciudad").Find(&barrios)
+	s.db.Where("ciudad_id = ?", id).Preload("Ciudad").Find(&barrios)
 	return barrios
 }
 
