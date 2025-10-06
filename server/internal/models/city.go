@@ -8,8 +8,10 @@ type Ciudad struct {
 }
 
 type CiudadOnly struct {
-	ID     int    `json:"id" gorm:"primaryKey"`
-	Nombre string `json:"nombre"`
+	ID             int          `json:"id" gorm:"primaryKey"`
+	Nombre         string       `json:"nombre"`
+	DepartamentoID int          `json:"-"`
+	Departamento   Departamento `json:"-" gorm:"foreignKey:DepartamentoID"`
 }
 
 func (Ciudad) TableName() string {

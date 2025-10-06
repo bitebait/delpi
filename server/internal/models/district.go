@@ -8,8 +8,10 @@ type Barrio struct {
 }
 
 type BarrioOnly struct {
-	ID     int    `json:"id" gorm:"primaryKey"`
-	Nombre string `json:"nombre"`
+	ID       int        `json:"id" gorm:"primaryKey"`
+	Nombre   string     `json:"nombre"`
+	CiudadID int        `json:"-"`
+	Ciudad   CiudadOnly `json:"-" gorm:"foreignKey:CiudadID"`
 }
 
 func (Barrio) TableName() string {
