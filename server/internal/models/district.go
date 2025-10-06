@@ -1,9 +1,10 @@
 package models
 
 type Barrio struct {
-	ID       int    `json:"id" gorm:"primaryKey"`
-	Nombre   string `json:"nombre"`
-	CiudadID int    `json:"-"`
+	ID       int        `json:"id" gorm:"primaryKey"`
+	Nombre   string     `json:"nombre"`
+	CiudadID int        `json:"-"`
+	Ciudad   CiudadOnly `json:"ciudad" gorm:"foreignKey:CiudadID"`
 }
 
 type BarrioOnly struct {
